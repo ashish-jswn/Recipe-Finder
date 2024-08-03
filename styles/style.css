@@ -1,0 +1,122 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #1e1e1e; /* Darker header background */
+    color: #e0e0e0; /* Light text color */
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+main {
+    margin-top: 5rem; /* Space for fixed header */
+    width: 90%;
+    max-width: 1200px; /* Adjusted for better centering */
+    text-align: center;
+}
+
+form {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center; /* Center-align input and button */
+    gap: 0.5rem; /* Space between input and button */
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 500px; /* Adjust width of the input box */
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #1e1e1e; /* Dark background for input */
+    color: #e0e0e0; /* Light text color for input */
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.recipe {
+    background-color: #1e1e1e; /* Dark background for recipe cards */
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.recipe:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.recipe img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.recipe h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.recipe p {
+    font-size: 0.875rem;
+    color: #ccc; /* Light color for text in recipe cards */
+}
+
+.recipe a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.recipe a:hover {
+    text-decoration: underline;
+}
